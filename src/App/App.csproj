@@ -185,7 +185,6 @@
     <Compile Include="Pages\Tools\ToolsAutofillServicePage.cs" />
     <Compile Include="Pages\Tools\ToolsAccessibilityServicePage.cs" />
     <Compile Include="Pages\Tools\ToolsExtensionPage.cs" />
-    <Compile Include="Pages\Tools\ToolsPasswordGeneratorSettingsPage.cs" />
     <Compile Include="Pages\Tools\ToolsPasswordGeneratorPage.cs" />
     <Compile Include="Pages\Tools\ToolsPage.cs" />
     <Compile Include="Pages\Settings\SettingsSyncPage.cs" />
