@@ -36,8 +36,9 @@ namespace Bit.App.Pages
                     },
                     new TableSection(AppResources.Icons)
                     {
-                        new CustomViewCell(@"Tools by Alex Auda Samora from the Noun Project
-Fingerprint by masterpage.com from the Noun Project")
+                        new CustomViewCell(@"Original Tools by Alex Auda Samora from the Noun Project
+Fingerprint by masterpage.com from the Noun Project
+safe by Tanguy Keryhuel from the Noun Project")
                     }
                 }
             };
