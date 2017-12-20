@@ -1,16 +1,8 @@
-[![appveyor build](https://ci.appveyor.com/api/projects/status/github/bitwarden/mobile?branch=master&svg=true)](https://ci.appveyor.com/project/bitwarden/mobile)
-[![Crowdin](https://d322cqt584bo4o.cloudfront.net/bitwarden-mobile/localized.svg)](https://crowdin.com/project/bitwarden-mobile)
-[![Join the chat at https://gitter.im/bitwarden/Lobby](https://badges.gitter.im/bitwarden/Lobby.svg)](https://gitter.im/bitwarden/Lobby)
+# bytewarden mobile
 
-# bitwarden mobile
+This is an unofficial fork of the bitwarden mobile application that is targeting older Windows UWP platforms including Windows 10 and Windows Phone 10. This is forked from the official bitwarden application (https://github.com/bitwarden/mobile).
 
-<a href="https://play.google.com/store/apps/details?id=com.x8bit.bitwarden" target="_blank"><img alt="Get it on Google Play" src="https://imgur.com/YQzmZi9.png" width="153" height="46"></a> <a href="https://itunes.apple.com/us/app/bitwarden-free-password-manager/id1137397744?mt=8" target="_blank"><img src="https://imgur.com/GdGqPMY.png" width="135" height="40"></a>
-
-The bitwarden mobile application is written in C# with Xamarin Android, Xamarin iOS, and Xamarin Forms.
-
-<img src="https://i.imgur.com/Ty8wkSO.png" alt="" width="300" height="533" /> <img src="https://i.imgur.com/BYb4gVc.png" alt="" width="300" height="533" />
-
-# Build/Run
+This is not affiliated with Bitwarden or Bitwarden Inc.
 
 **Requirements**
 
