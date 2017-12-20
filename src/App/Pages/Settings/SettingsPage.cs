@@ -174,7 +174,6 @@ namespace Bit.App.Pages
                     ShowDisclousure = true,
                     DetailLineBreakMode = LineBreakMode.WordWrap
                 };
-                otherSection.Add(RateCell);
             }
 
             Table = new CustomTable
