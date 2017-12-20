@@ -140,7 +140,7 @@ namespace Bit.App.Pages
         private void EmailCell_Tapped(object sender, EventArgs e)
         {
             _googleAnalyticsService.TrackAppEvent("HelpEmail");
-            Device.OpenUri(new Uri("mailto:hello@bitwarden.com"));
+            Device.OpenUri(new Uri("mailto:alistair@alistair23.me"));
         }
 
         private void WebsiteCell_Tapped(object sender, EventArgs e)
