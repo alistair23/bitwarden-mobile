@@ -4,11 +4,11 @@ using System.Reflection;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("BitwardenApp")]
+[assembly: AssemblyTitle("BytewardenApp")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("8bit Solutions LLC")]
-[assembly: AssemblyProduct("bitwarden")]
+[assembly: AssemblyCompany("Alistair23")]
+[assembly: AssemblyProduct("bytewarden")]
 [assembly: AssemblyCopyright("Copyright © 2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

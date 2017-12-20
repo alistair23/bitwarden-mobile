@@ -431,7 +431,7 @@ namespace Bit.App.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to bitwarden.
+        ///   Looks up a localized string similar to bytewarden.
         /// </summary>
         public static string Bitwarden {
             get {
@@ -440,7 +440,7 @@ namespace Bit.App.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to bitwarden App Extension.
+        ///   Looks up a localized string similar to bytewarden App Extension.
         /// </summary>
         public static string BitwardenAppExtension {
             get {
