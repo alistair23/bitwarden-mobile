@@ -35,7 +35,7 @@ namespace Bit.App.Pages
             {
                 FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label)),
                 Text = $@"{AppResources.Version} {_appInfoService.Version} ({_appInfoService.Build})
-© 8bit Solutions LLC 2015-{DateTime.Now.Year}",
+© Original Work 8bit Solutions LLC 2015-{DateTime.Now.Year}",
                 HorizontalTextAlignment = TextAlignment.Center
             };
 
