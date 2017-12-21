@@ -15,7 +15,7 @@ namespace Bit.App.Services
         private readonly ISecureStorageService _secureStorage;
 
         private string _token;
-        private JObject _decodedToken;
+        private dynamic _decodedToken;
         private string _refreshToken;
 
         public TokenService(ISecureStorageService secureStorage)

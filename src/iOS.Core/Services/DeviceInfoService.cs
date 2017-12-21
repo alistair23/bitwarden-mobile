@@ -42,7 +42,7 @@ namespace Bit.iOS.Core.Services
                     return false;
                 }
 
-                return context.BiometryType == LABiometryType.FaceId;
+                return context.BiometryType == LABiometryType.TypeFaceId;
             }
         }
     }
