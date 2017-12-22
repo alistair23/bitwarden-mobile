@@ -10,6 +10,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Bit.App</RootNamespace>
     <AssemblyName>BitwardenApp</AssemblyName>
+    <NeutralLanguage>en-US</NeutralLanguage>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>Profile111</TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
