@@ -143,7 +143,6 @@ namespace Bit.UWP
             container.RegisterSingleton<IPushNotificationListener, PushNotificationListener>();
             container.RegisterSingleton<IPushNotificationService, UwpPushNotificationService>();
 
-            CachedImageRenderer.Init();
             Resolver.SetResolver(new SimpleInjectorResolver(container));
         }
     }
