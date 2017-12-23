@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Linq;
 using System.Threading.Tasks;
-using Acr.UserDialogs;
 using Bit.App.Abstractions;
 using Bit.App.Controls;
 using Bit.App.Resources;
@@ -21,7 +20,6 @@ namespace Bit.App.Pages
         private readonly IFolderService _folderService;
         private readonly ICollectionService _collectionService;
         private readonly ICipherService _cipherService;
-        private readonly IUserDialogs _userDialogs;
         private readonly IConnectivity _connectivity;
         private readonly IDeviceActionService _deviceActionService;
         private readonly ISyncService _syncService;
@@ -39,7 +37,6 @@ namespace Bit.App.Pages
             _collectionService = Resolver.Resolve<ICollectionService>();
             _cipherService = Resolver.Resolve<ICipherService>();
             _connectivity = Resolver.Resolve<IConnectivity>();
-            _userDialogs = Resolver.Resolve<IUserDialogs>();
             _deviceActionService = Resolver.Resolve<IDeviceActionService>();
             _syncService = Resolver.Resolve<ISyncService>();
             _pushNotification = Resolver.Resolve<IPushNotificationService>();
@@ -119,7 +116,7 @@ namespace Bit.App.Pages
             Title = AppResources.MyVault;
         }
 
-        protected override void OnAppearing()
+        protected async override void OnAppearing()
         {
             base.OnAppearing();
             MessagingCenter.Subscribe<Application, bool>(Application.Current, "SyncCompleted", (sender, success) =>
@@ -136,34 +133,31 @@ namespace Bit.App.Pages
 
             _filterResultsCancellationTokenSource = FetchAndLoadVault();
 
-            if(_connectivity.IsConnected && Device.RuntimePlatform == Device.iOS)
+            // Push registration
+            if(_connectivity.IsConnected)
             {
-                var pushPromptShow = _settings.GetValueOrDefault(Constants.PushInitialPromptShown, false);
-                Action registerAction = () =>
+                var lastPushRegistration = _settings.GetValueOrDefault(Constants.PushLastRegistrationDate,
+                    DateTime.MinValue);
+
+                if(Device.RuntimePlatform == Device.iOS)
                 {
-                    var lastPushRegistration =
-                        _settings.GetValueOrDefault(Constants.PushLastRegistrationDate, DateTime.MinValue);
+                    var pushPromptShow = _settings.GetValueOrDefault(Constants.PushInitialPromptShown, false);
+                    if(!pushPromptShow)
+                    {
+                        _settings.AddOrUpdateValue(Constants.PushInitialPromptShown, true);
+                        await DisplayAlert(AppResources.EnableAutomaticSyncing, AppResources.PushNotificationAlert,
+                            AppResources.OkGotIt);
+                    }
+
                     if(!pushPromptShow || DateTime.UtcNow - lastPushRegistration > TimeSpan.FromDays(1))
                     {
                         _pushNotification.Register();
                     }
-                };
-
-                if(!pushPromptShow)
-                {
-                    _settings.AddOrUpdateValue(Constants.PushInitialPromptShown, true);
-                    _userDialogs.Alert(new AlertConfig
-                    {
-                        Message = AppResources.PushNotificationAlert,
-                        Title = AppResources.EnableAutomaticSyncing,
-                        OnAction = registerAction,
-                        OkText = AppResources.OkGotIt
-                    });
                 }
-                else
+                else if(Device.RuntimePlatform == Device.Android &&
+                    DateTime.UtcNow - lastPushRegistration > TimeSpan.FromDays(1))
                 {
-                    // Check push registration once per day
-                    registerAction();
+                    _pushNotification.Register();
                 }
             }
         }
@@ -230,7 +224,7 @@ namespace Bit.App.Pages
 
                 if(collections.Any())
                 {
-                    folderGroupings.Add(new GroupingOrCipher(new Grouping(AppResources.FolderNone, 
+                    folderGroupings.Add(new GroupingOrCipher(new Grouping(AppResources.FolderNone,
                         noFolderCipherGroupings.Count)));
                 }
 
