@@ -23,7 +23,7 @@ namespace Bit.App.Pages
 
         public ExtendedObservableCollection<SettingsFolderPageModel> Folders { get; private set; }
             = new ExtendedObservableCollection<SettingsFolderPageModel>();
-        public ListView ListView { get; set; }
+        public ExtendedListView ListView { get; set; }
         private AddFolderToolBarItem AddItem { get; set; }
 
         private void Init()
@@ -31,7 +31,7 @@ namespace Bit.App.Pages
             AddItem = new AddFolderToolBarItem(this);
             ToolbarItems.Add(AddItem);
 
-            ListView = new ListView
+            ListView = new ExtendedListView
             {
                 ItemsSource = Folders,
                 ItemTemplate = new DataTemplate(() => new SettingsFolderListViewCell(this))

@@ -59,7 +59,7 @@ namespace Bit.App.Pages
         public ExtendedObservableCollection<Section<Cipher>> PresentationSections { get; private set; }
             = new ExtendedObservableCollection<Section<Cipher>>();
         public Cipher[] Ciphers { get; set; } = new Cipher[] { };
-        public ListView ListView { get; set; }
+        public ExtendedListView ListView { get; set; }
         public SearchBar Search { get; set; }
         public ActivityIndicator LoadingIndicator { get; set; }
         public StackLayout NoDataStackLayout { get; set; }
@@ -74,7 +74,7 @@ namespace Bit.App.Pages
                 ToolbarItems.Add(AddCipherItem);
             }
 
-            ListView = new ListView(ListViewCachingStrategy.RecycleElement)
+            ListView = new ExtendedListView(ListViewCachingStrategy.RecycleElement)
             {
                 IsGroupingEnabled = true,
                 ItemsSource = PresentationSections,
