@@ -52,7 +52,6 @@ namespace Bit.App.Pages
         }
 
         public ContentView ContentView { get; set; }
-        public Fab Fab { get; set; }
         public ExtendedObservableCollection<Section<AutofillCipher>> PresentationCiphersGroup { get; private set; }
             = new ExtendedObservableCollection<Section<AutofillCipher>>();
         public StackLayout NoDataStackLayout { get; set; }
@@ -116,16 +115,7 @@ namespace Bit.App.Pages
                 HorizontalOptions = LayoutOptions.Center
             };
 
-            ContentView = new ContentView
-            {
-                Content = LoadingIndicator
-            };
-
-            var fabLayout = new FabLayout(ContentView);
-            Fab = new Fab(fabLayout, "plus.png", async (sender, args) => await AddCipherAsync());
-            ListView.BottomPadding = 170;
-
-            Content = fabLayout;
+            Content = LoadingIndicator;
         }
 
         protected override void OnAppearing()
