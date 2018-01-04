@@ -44,37 +44,7 @@ namespace Bit.App.Controls
 
         protected override SizeRequest OnSizeRequest(double widthConstraint, double heightConstraint)
         {
-            if(!VerticalOptions.Expands && Device.RuntimePlatform != Device.Windows)
-            {
-                var baseOnSizeRequest = GetVisualElementOnSizeRequest();
-                return baseOnSizeRequest(widthConstraint, heightConstraint);
-            }
-
             return base.OnSizeRequest(widthConstraint, heightConstraint);
-        }
-
-        private Func<double, double, SizeRequest> GetVisualElementOnSizeRequest()
-        {
-            var handle = typeof(VisualElement).GetMethod(
-                "OnSizeRequest",
-                BindingFlags.Instance | BindingFlags.NonPublic,
-                null,
-                new Type[] { typeof(double), typeof(double) },
-                null)?.MethodHandle;
-
-            if(!handle.HasValue)
-            {
-                throw new ArgumentNullException("handle could not be found.");
-            }
-
-            var pointer = handle.Value.GetFunctionPointer();
-            if(pointer == null)
-            {
-                throw new ArgumentNullException("pointer could not be found.");
-            }
-
-            return (Func<double, double, SizeRequest>)Activator.CreateInstance(
-                typeof(Func<double, double, SizeRequest>), this, pointer);
         }
     }
 }
