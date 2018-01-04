@@ -47,7 +47,6 @@
     <Compile Include="Abstractions\Repositories\ISettingsRepository.cs" />
     <Compile Include="Abstractions\Services\IAppSettingsService.cs" />
     <Compile Include="Abstractions\Services\ICollectionService.cs" />
-    <Compile Include="Abstractions\Services\IMemoryService.cs" />
     <Compile Include="Abstractions\Services\IPushNotificationListener.cs" />
     <Compile Include="Abstractions\Services\IPushNotification.cs" />
     <Compile Include="Abstractions\Services\ISettingsService.cs" />
@@ -61,7 +60,6 @@
     <Compile Include="Abstractions\Services\IDeviceActionService.cs" />
     <Compile Include="Abstractions\Services\IKeyDerivationService.cs" />
     <Compile Include="Abstractions\Services\ILogService.cs" />
-    <Compile Include="Abstractions\Services\IReflectionService.cs" />
     <Compile Include="Abstractions\Services\ICipherService.cs" />
     <Compile Include="Abstractions\Services\IFolderService.cs" />
     <Compile Include="App.cs" />
@@ -78,7 +76,7 @@
     <Compile Include="Controls\ExtendedNavigationPage.cs" />
     <Compile Include="Controls\ExtendedContentPage.cs" />
     <Compile Include="Controls\LabeledRightDetailCell.cs" />
-    <Compile Include="Controls\MemoryContentView.cs" />
+    <Compile Include="Controls\RedrawableStackLayout.cs" />
     <Compile Include="Controls\SectionHeaderViewCell.cs" />
     <Compile Include="Controls\StepperCell.cs" />
     <Compile Include="Controls\ExtendedTableView.cs" />
