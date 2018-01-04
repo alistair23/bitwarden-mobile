@@ -156,7 +156,7 @@ namespace Bit.App.Pages
             {
                 Title = AppResources.SearchVault;
 
-                if(Device.RuntimePlatform == Device.iOS || Device.RuntimePlatform == Device.UWP)
+                if(Device.RuntimePlatform == Device.iOS || Device.RuntimePlatform == Device.Windows)
                 {
                     ToolbarItems.Add(new DismissModalToolBarItem(this));
                 }
@@ -167,7 +167,7 @@ namespace Bit.App.Pages
                 IsRunning = true
             };
 
-            if(Device.RuntimePlatform != Device.UWP)
+            if(Device.RuntimePlatform != Device.Windows)
             {
                 LoadingIndicator.VerticalOptions = LayoutOptions.CenterAndExpand;
                 LoadingIndicator.HorizontalOptions = LayoutOptions.Center;
