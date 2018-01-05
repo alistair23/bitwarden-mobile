@@ -333,6 +333,10 @@ namespace Bit.App.Pages
 
             protected override DataTemplate OnSelectTemplate(object item, BindableObject container)
             {
+                if(item == null)
+                {
+                    return null;
+                }
                 return ((GroupingOrCipher)item).Cipher == null ? GroupingTemplate : CipherTemplate;
             }
         }
