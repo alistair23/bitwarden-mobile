@@ -12,23 +12,23 @@ VoiceTitle,7,Text,,
 ShortDescription,8,Text,,
 DevStudio,9,Text,,
 SupportContactInfo,10,URL or email address,,
-PrivacyPolicyUrl,11,URL,,
+PrivacyPolicyUrl,11,URL,,https://bitwarden.com/privacy
 CopyrightTrademarkInformation,12,Text,,
 AdditionalLicenseTerms,13,Text,,
 Website,14,URL,,
 DesktopScreenshot1,100,Relative path (or URL to file in Dev Center),,https://developer.microsoft.com/en-us/dashboard/apps/9N248V7DK05K/submissions/1152921504627249361/listings/2000000000000379683/listingassets/1152921504743844255
 DesktopScreenshot2,101,Relative path (or URL to file in Dev Center),,https://developer.microsoft.com/en-us/dashboard/apps/9N248V7DK05K/submissions/1152921504627249361/listings/2000000000000379683/listingassets/1152921504743844237
-DesktopScreenshot3,102,Relative path (or URL to file in Dev Center),,
-DesktopScreenshot4,103,Relative path (or URL to file in Dev Center),,
+DesktopScreenshot3,102,Relative path (or URL to file in Dev Center),,https://developer.microsoft.com/en-us/dashboard/apps/9N248V7DK05K/submissions/1152921504627249361/listings/2000000000000379683/listingassets/1152921504743998277
+DesktopScreenshot4,103,Relative path (or URL to file in Dev Center),,https://developer.microsoft.com/en-us/dashboard/apps/9N248V7DK05K/submissions/1152921504627249361/listings/2000000000000379683/listingassets/1152921504743998302
 DesktopScreenshot5,104,Relative path (or URL to file in Dev Center),,
 DesktopScreenshot6,105,Relative path (or URL to file in Dev Center),,
 DesktopScreenshot7,106,Relative path (or URL to file in Dev Center),,
 DesktopScreenshot8,107,Relative path (or URL to file in Dev Center),,
 DesktopScreenshot9,108,Relative path (or URL to file in Dev Center),,
 DesktopScreenshotCaption1,150,Text,,
-DesktopScreenshotCaption2,151,Text,,
-DesktopScreenshotCaption3,152,Text,,
-DesktopScreenshotCaption4,153,Text,,
+DesktopScreenshotCaption2,151,Text,,Generate passwords
+DesktopScreenshotCaption3,152,Text,,View existing password stores
+DesktopScreenshotCaption4,153,Text,,Edit existing data
 DesktopScreenshotCaption5,154,Text,,
 DesktopScreenshotCaption6,155,Text,,
 DesktopScreenshotCaption7,156,Text,,
@@ -36,17 +36,17 @@ DesktopScreenshotCaption8,157,Text,,
 DesktopScreenshotCaption9,158,Text,,
 MobileScreenshot1,200,Relative path (or URL to file in Dev Center),,https://developer.microsoft.com/en-us/dashboard/apps/9N248V7DK05K/submissions/1152921504627249361/listings/2000000000000379683/listingassets/1152921504743844060
 MobileScreenshot2,201,Relative path (or URL to file in Dev Center),,https://developer.microsoft.com/en-us/dashboard/apps/9N248V7DK05K/submissions/1152921504627249361/listings/2000000000000379683/listingassets/1152921504743844311
-MobileScreenshot3,202,Relative path (or URL to file in Dev Center),,
-MobileScreenshot4,203,Relative path (or URL to file in Dev Center),,
-MobileScreenshot5,204,Relative path (or URL to file in Dev Center),,
+MobileScreenshot3,202,Relative path (or URL to file in Dev Center),,https://developer.microsoft.com/en-us/dashboard/apps/9N248V7DK05K/submissions/1152921504627249361/listings/2000000000000379683/listingassets/1152921504743997801
+MobileScreenshot4,203,Relative path (or URL to file in Dev Center),,https://developer.microsoft.com/en-us/dashboard/apps/9N248V7DK05K/submissions/1152921504627249361/listings/2000000000000379683/listingassets/1152921504743997586
+MobileScreenshot5,204,Relative path (or URL to file in Dev Center),,https://developer.microsoft.com/en-us/dashboard/apps/9N248V7DK05K/submissions/1152921504627249361/listings/2000000000000379683/listingassets/1152921504743997812
 MobileScreenshot6,205,Relative path (or URL to file in Dev Center),,
 MobileScreenshot7,206,Relative path (or URL to file in Dev Center),,
 MobileScreenshot8,207,Relative path (or URL to file in Dev Center),,
 MobileScreenshotCaption1,250,Text,,
 MobileScreenshotCaption2,251,Text,,
-MobileScreenshotCaption3,252,Text,,
-MobileScreenshotCaption4,253,Text,,
-MobileScreenshotCaption5,254,Text,,
+MobileScreenshotCaption3,252,Text,,Windows Hello support
+MobileScreenshotCaption4,253,Text,,View existing password entries
+MobileScreenshotCaption5,254,Text,,Edit password entries
 MobileScreenshotCaption6,255,Text,,
 MobileScreenshotCaption7,256,Text,,
 MobileScreenshotCaption8,257,Text,,
