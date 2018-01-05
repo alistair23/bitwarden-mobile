@@ -1,8 +1,8 @@
-# bytewarden mobile
+# Bytewarden
 
 This is an unofficial fork of the bitwarden mobile application that is targeting older Windows UWP platforms including Windows 10 and Windows Phone 10. This is forked from the official bitwarden application (https://github.com/bitwarden/mobile).
 
-This is not affiliated with Bitwarden or Bitwarden Inc.
+This is not affiliated with bitwarden or bitwarden Inc.
 
 **Requirements**
 
