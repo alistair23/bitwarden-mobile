@@ -883,7 +883,7 @@
     <comment>For 2FA</comment>
   </data>
   <data name="YubiKeyInstruction" xml:space="preserve">
-    <value>Hold your YubiKey NEO against the back of the device to continue.</value>
+    <value>Hold your YubiKey NEO against the back of the device to continue. You can also use the YubiKey keyboard functionality to enter the code.</value>
   </data>
   <data name="YubiKeyTitle" xml:space="preserve">
     <value>YubiKey NEO Security Key</value>
@@ -1230,5 +1230,8 @@
   </data>
   <data name="WindowsHello" xml:space="preserve">
     <value>Windows Hello</value>
+  </data>
+  <data name="YubiKeyTextEnter" xml:space="preserve">
+    <value>YubiKey OTP Output</value>
   </data>
 </root>

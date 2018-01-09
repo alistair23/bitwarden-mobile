@@ -3148,11 +3148,20 @@ namespace Bit.App.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Hold your YubiKey NEO against the back of the device to continue..
+        ///   Looks up a localized string similar to Hold your YubiKey NEO against the back of the device to continue. You can also use the YubiKey keyboard functionality to enter the code..
         /// </summary>
         public static string YubiKeyInstruction {
             get {
                 return ResourceManager.GetString("YubiKeyInstruction", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to YubiKey OTP Output.
+        /// </summary>
+        public static string YubiKeyTextEnter {
+            get {
+                return ResourceManager.GetString("YubiKeyTextEnter", resourceCulture);
             }
         }
         
