@@ -11,6 +11,8 @@ using Bit.App.Enums;
 using System.Collections.Generic;
 using System.Net;
 using FFImageLoading.Forms;
+using HidLibrary;
+using u2fhost;
 
 namespace Bit.App.Pages
 {
@@ -265,6 +267,28 @@ namespace Bit.App.Pages
                 Title = AppResources.YubiKeyTitle;
                 Content = scrollView;
             }
+            else if(_providerType == TwoFactorProviderType.U2f)
+            {
+                instruction.Text = "Use U2F to login";
+
+                var table = new TwoFactorTable(
+                    new TableSection(Helpers.GetEmptyTableSectionTitle())
+                    {
+                        RememberCell
+                    });
+
+                var layout = new RedrawableStackLayout
+                {
+                    Children = { instruction, table, anotherMethodButton },
+                    Spacing = 0
+                };
+
+                table.WrappingStackLayout = () => layout;
+                scrollView.Content = layout;
+
+                Title = AppResources.YubiKeyTitle;
+                Content = scrollView;
+            }
         }
 
         protected override void OnAppearing()
@@ -344,7 +368,7 @@ namespace Bit.App.Pages
             }
             else if(selection == AppResources.YubiKeyTitle)
             {
-                _providerType = TwoFactorProviderType.YubiKey;
+                _providerType = TwoFactorProviderType.U2f;
             }
             else if(selection == AppResources.Email)
             {
@@ -388,9 +412,36 @@ namespace Bit.App.Pages
             }
         }
 
+        private async Task u2fWait()
+        {
+            IHidDevice hidDevice = null;
+            const int VendorId = 0x1050;
+            const int ProductId = 0x0120;
+
+            while(hidDevice == null)
+            {
+                using(hidDevice = HidDevices.GetDevice(""))
+                {
+                    if(hidDevice == null)
+                    {
+                        await Task.Delay(250);
+                        continue;
+                    }
+
+                    var appId = "http://localhost";
+                    var facet = "http://localhost";
+
+                    var registration = await U2FHost.RegisterAsync(hidDevice, appId, facet);
+
+                    await U2FHost.AuthenticateAsync(hidDevice, registration, appId, facet);
+                }
+            }
+        }
+
         private async void Entry_Completed(object sender, EventArgs e)
         {
             var token = TokenCell.Entry.Text.Trim().Replace(" ", "");
+            await u2fWait();
             await LogInAsync(token);
         }
 
@@ -458,9 +509,16 @@ namespace Bit.App.Pages
                                 continue;
                             }
                             break;
+                        case TwoFactorProviderType.U2f:
+                            if(Device.RuntimePlatform != Device.UWP)
+                            {
+                                continue;
+                            }
+                            break;
                         case TwoFactorProviderType.YubiKey:
                             var nfcKey = p.Value.ContainsKey("Nfc") && (bool)p.Value["Nfc"];
-                            if((!_deviceInfoService.NfcEnabled || !nfcKey) && (Device.RuntimePlatform != Device.UWP))
+                            if((!_deviceInfoService.NfcEnabled || !nfcKey) && (Device.RuntimePlatform != Device.UWP) ||
+                                provider == TwoFactorProviderType.U2f)
                             {
                                 continue;
                             }
