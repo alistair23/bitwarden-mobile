@@ -81,7 +81,7 @@ namespace Bit.App.Pages
 
             table.WrappingStackLayout = () => stackLayout;
 
-            if(Device.RuntimePlatform == Device.iOS || Device.RuntimePlatform == Device.Windows)
+            if(Device.RuntimePlatform == Device.iOS || Device.RuntimePlatform == Device.UWP)
             {
                 ToolbarItems.Add(new DismissModalToolBarItem(this, AppResources.Close));
             }

@@ -106,7 +106,7 @@ namespace Bit.App.Pages
                 IsRunning = true
             };
 
-            if(Device.RuntimePlatform != Device.Windows)
+            if(Device.RuntimePlatform != Device.UWP)
             {
                 LoadingIndicator.VerticalOptions = LayoutOptions.CenterAndExpand;
                 LoadingIndicator.HorizontalOptions = LayoutOptions.Center;

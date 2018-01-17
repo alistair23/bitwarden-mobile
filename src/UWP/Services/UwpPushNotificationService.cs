@@ -36,7 +36,7 @@ namespace Bit.UWP.Services
             Debug.WriteLine("Registering call back for Push Notification Channel");
             _channel.PushNotificationReceived += Channel_PushNotificationReceived;
 
-            _pushNotificationListener.OnRegistered(Token, Device.Windows);
+            _pushNotificationListener.OnRegistered(Token, Device.UWP);
         }
 
         private void Channel_PushNotificationReceived(PushNotificationChannel sender, PushNotificationReceivedEventArgs args)
@@ -64,7 +64,7 @@ namespace Bit.UWP.Services
             }
 
             Debug.WriteLine("Sending JObject to PushNotificationListener " + args.NotificationType);
-            _pushNotificationListener.OnMessage(jobject, Device.Windows);
+            _pushNotificationListener.OnMessage(jobject, Device.UWP);
         }
 
         public void Unregister()
@@ -75,7 +75,7 @@ namespace Bit.UWP.Services
                 _channel = null;
             }
 
-            _pushNotificationListener.OnUnregistered(Device.Windows);
+            _pushNotificationListener.OnUnregistered(Device.UWP);
         }
     }
 }

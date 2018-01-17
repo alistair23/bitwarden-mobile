@@ -114,7 +114,7 @@ namespace Bit.App.Controls
 
                 containerStackLayout.AdjustPaddingForDevice();
             }
-            else if(Device.RuntimePlatform == Device.Windows)
+            else if(Device.RuntimePlatform == Device.UWP)
             {
                 buttonStackLayout.Spacing = 0;
 
