@@ -43,6 +43,7 @@
         public const string ApiUrl = "other:apiUrl";
         public const string IdentityUrl = "other:identityUrl";
         public const string IconsUrl = "other:iconsUrl";
+        public const string FailedPinAttempts = "other:failedPinAttempts";
 
         public const int SelectFileRequestCode = 42;
         public const int SelectFilePermissionRequestCode = 43;
