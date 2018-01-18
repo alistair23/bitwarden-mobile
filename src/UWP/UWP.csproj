@@ -228,7 +228,7 @@
       <Version>2.3.4</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Forms">
-      <Version>2.4.0.91020</Version>
+      <Version>2.5.0.122203</Version>
     </PackageReference>
     <PackageReference Include="XLabs.IoC">
       <Version>2.0.5782</Version>
