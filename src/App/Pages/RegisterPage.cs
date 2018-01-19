@@ -111,11 +111,6 @@ namespace Bit.App.Pages
                 Spacing = 0
             };
 
-            var scrollView = new ScrollView
-            {
-                Content = StackLayout
-            };
-
             var loginToolbarItem = new ToolbarItem(AppResources.Submit, Helpers.ToolbarImage("ion_chevron_right.png"), async () =>
             {
                 await Register();
@@ -133,7 +128,7 @@ namespace Bit.App.Pages
 
             ToolbarItems.Add(loginToolbarItem);
             Title = AppResources.CreateAccount;
-            Content = scrollView;
+            Content = StackLayout;
         }
 
         protected override void OnAppearing()

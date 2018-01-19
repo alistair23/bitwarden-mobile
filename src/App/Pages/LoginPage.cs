@@ -100,8 +100,6 @@ namespace Bit.App.Pages
 
             table.WrappingStackLayout = () => layout;
 
-            var scrollView = new ScrollView { Content = layout };
-
             if(Device.RuntimePlatform == Device.iOS)
             {
                 table.RowHeight = -1;
@@ -119,7 +117,7 @@ namespace Bit.App.Pages
 
             ToolbarItems.Add(loginToolbarItem);
             Title = AppResources.Bitwarden;
-            Content = scrollView;
+            Content = layout;
             NavigationPage.SetBackButtonTitle(this, AppResources.LogIn);
         }
 
