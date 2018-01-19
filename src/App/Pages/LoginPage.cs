@@ -100,7 +100,11 @@ namespace Bit.App.Pages
 
             table.WrappingStackLayout = () => layout;
 
-            var scrollView = new ScrollView { Content = layout };
+            var scrollView = new ExtendedScrollView
+            {
+                Content = layout,
+                EnableScrolling = false
+            };
 
             if(Device.RuntimePlatform == Device.iOS)
             {
