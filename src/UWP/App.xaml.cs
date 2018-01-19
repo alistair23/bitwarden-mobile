@@ -50,7 +50,8 @@ namespace Bit.UWP
                 {
                     typeof(CachedImage).GetTypeInfo().Assembly,
                     typeof(CachedImageRenderer).GetTypeInfo().Assembly,
-                    typeof(Controls.ExtendedTableViewRenderer).GetTypeInfo().Assembly
+                    typeof(Controls.ExtendedTableViewRenderer).GetTypeInfo().Assembly,
+                    typeof(Controls.ExtendedScrollViewRenderer).GetTypeInfo().Assembly
                 };
                 Xamarin.Forms.Forms.Init(e, assembliesToInclude);
 

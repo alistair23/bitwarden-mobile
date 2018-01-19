@@ -96,6 +96,7 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="Controls\ExtendedTableViewRenderer.cs" />
+    <Compile Include="Controls\ExtendedScrollViewRenderer.cs" />
     <Compile Include="IconConverter.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
