@@ -4,6 +4,8 @@ This is an unofficial fork of the bitwarden mobile application that is targeting
 
 This is not affiliated with bitwarden or bitwarden Inc.
 
+The app is avaliable on Windows 10, Windows 10 S, Windows 10 Mobile and the Xbox One via the [Microsoft Store - Bytewarden](https://www.microsoft.com/en-us/store/p/bytewarden/9n248v7dk05k)
+
 **Requirements**
 
 - [Visual Studio w/ Xamarin -or- Xamarin Studio](https://store.xamarin.com/)
