@@ -21,7 +21,8 @@ namespace Bit.App.Pages
         private readonly ICipherService _cipherService;
         private readonly IDeviceActionService _deviceActionService;
         private readonly ITokenService _tokenService;
-        private bool _pageDisappeared = true;
+        private DateTime? _timerStarted = null;
+        private TimeSpan _timerMaxLength = TimeSpan.FromMinutes(5);
 
         public VaultViewCipherPage(CipherType type, string cipherId)
         {
@@ -259,7 +260,6 @@ namespace Bit.App.Pages
 
         protected async override void OnAppearing()
         {
-            _pageDisappeared = false;
             NotesCell.Tapped += NotesCell_Tapped;
             EditItem.InitEvents();
 
@@ -277,7 +277,7 @@ namespace Bit.App.Pages
 
         protected override void OnDisappearing()
         {
-            _pageDisappeared = true;
+            _timerStarted = null;
             NotesCell.Tapped -= NotesCell_Tapped;
             EditItem.Dispose();
             CleanupAttachmentCells();
@@ -368,9 +368,10 @@ namespace Bit.App.Pages
                             if(!string.IsNullOrWhiteSpace(Model.LoginTotpCode))
                             {
                                 TotpTick(totpKey);
+                                _timerStarted = DateTime.Now;
                                 Device.StartTimer(new TimeSpan(0, 0, 1), () =>
                                 {
-                                    if(_pageDisappeared)
+                                    if(_timerStarted == null || (DateTime.Now - _timerStarted) > _timerMaxLength)
                                     {
                                         return false;
                                     }
