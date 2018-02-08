@@ -220,7 +220,7 @@
       <Version>1.5.166-beta</Version>
     </PackageReference>
     <PackageReference Include="Xam.Plugin.Connectivity">
-      <Version>3.0.3</Version>
+      <Version>3.1.1</Version>
     </PackageReference>
     <PackageReference Include="Xam.Plugins.Settings">
       <Version>3.1.1</Version>
