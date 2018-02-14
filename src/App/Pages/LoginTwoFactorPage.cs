@@ -67,7 +67,6 @@ namespace Bit.App.Pages
             }
 
             ToolbarItems.Clear();
-            var scrollView = new ScrollView();
 
             var anotherMethodButton = new ExtendedButton
             {
@@ -110,10 +109,8 @@ namespace Bit.App.Pages
                     Spacing = 0
                 };
 
-                scrollView.Content = layout;
-
                 Title = AppResources.LoginUnavailable;
-                Content = scrollView;
+                Content = layout;
             }
             else if(_providerType.Value == TwoFactorProviderType.Authenticator ||
                 _providerType.Value == TwoFactorProviderType.Email)
@@ -143,7 +140,6 @@ namespace Bit.App.Pages
                 };
 
                 table.WrappingStackLayout = () => layout;
-                scrollView.Content = layout;
 
                 switch(_providerType.Value)
                 {
@@ -177,7 +173,7 @@ namespace Bit.App.Pages
                 ToolbarItems.Add(continueToolbarItem);
                 Title = AppResources.VerificationCode;
 
-                Content = scrollView;
+                Content = layout;
                 TokenCell.Entry.FocusWithDelay();
             }
             else if(_providerType == TwoFactorProviderType.Duo)
@@ -222,10 +218,9 @@ namespace Bit.App.Pages
                 };
 
                 table.WrappingStackLayout = () => layout;
-                scrollView.Content = layout;
 
                 Title = "Duo";
-                Content = scrollView;
+                Content = layout;
             }
             else if(_providerType == TwoFactorProviderType.YubiKey)
             {
@@ -258,11 +253,10 @@ namespace Bit.App.Pages
                 };
 
                 table.WrappingStackLayout = () => layout;
-                scrollView.Content = layout;
                 ToolbarItems.Add(continueToolbarItem);
 
                 Title = AppResources.YubiKeyTitle;
-                Content = scrollView;
+                Content = layout;
             }
         }
 
