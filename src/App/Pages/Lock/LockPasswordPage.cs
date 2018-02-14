@@ -75,8 +75,6 @@ namespace Bit.App.Pages
 
             table.WrappingStackLayout = () => stackLayout;
 
-            var scrollView = new ScrollView { Content = stackLayout };
-
             if(Device.RuntimePlatform == Device.iOS)
             {
                 table.RowHeight = -1;
@@ -90,7 +88,7 @@ namespace Bit.App.Pages
 
             ToolbarItems.Add(loginToolbarItem);
             Title = AppResources.VerifyMasterPassword;
-            Content = scrollView;
+            Content = stackLayout;
         }
 
         private async void Entry_Completed(object sender, EventArgs e)
