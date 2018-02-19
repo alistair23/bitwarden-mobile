@@ -205,7 +205,7 @@
       <Version>2.1.1</Version>
     </PackageReference>
     <PackageReference Include="Newtonsoft.Json">
-      <Version>10.0.3</Version>
+      <Version>11.0.1</Version>
     </PackageReference>
     <PackageReference Include="PCLCrypto">
       <Version>2.0.147</Version>
@@ -229,7 +229,7 @@
       <Version>2.3.4</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Forms">
-      <Version>2.5.0.274780</Version>
+      <Version>2.5.0.280555</Version>
     </PackageReference>
     <PackageReference Include="XLabs.IoC">
       <Version>2.0.5782</Version>
