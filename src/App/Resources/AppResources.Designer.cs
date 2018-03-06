@@ -422,6 +422,15 @@ namespace Bit.App.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Base Domain.
+        /// </summary>
+        public static string BaseDomain {
+            get {
+                return ResourceManager.GetString("BaseDomain", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Beta.
         /// </summary>
         public static string Beta {
@@ -926,6 +935,15 @@ namespace Bit.App.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Default.
+        /// </summary>
+        public static string Default {
+            get {
+                return ResourceManager.GetString("Default", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Delete.
         /// </summary>
         public static string Delete {
@@ -1156,6 +1174,15 @@ namespace Bit.App.Resources {
         public static string EnvironmentSaved {
             get {
                 return ResourceManager.GetString("EnvironmentSaved", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exact.
+        /// </summary>
+        public static string Exact {
+            get {
+                return ResourceManager.GetString("Exact", resourceCulture);
             }
         }
         
@@ -1552,6 +1579,15 @@ namespace Bit.App.Resources {
         public static string Hide {
             get {
                 return ResourceManager.GetString("Hide", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Host.
+        /// </summary>
+        public static string Host {
+            get {
+                return ResourceManager.GetString("Host", resourceCulture);
             }
         }
         
@@ -2474,6 +2510,15 @@ namespace Bit.App.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Regular expression.
+        /// </summary>
+        public static string RegEx {
+            get {
+                return ResourceManager.GetString("RegEx", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Remember me.
         /// </summary>
         public static string RememberMe {
@@ -2704,6 +2749,15 @@ namespace Bit.App.Resources {
         public static string SSN {
             get {
                 return ResourceManager.GetString("SSN", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Starts with.
+        /// </summary>
+        public static string StartsWith {
+            get {
+                return ResourceManager.GetString("StartsWith", resourceCulture);
             }
         }
         
@@ -2947,6 +3001,15 @@ namespace Bit.App.Resources {
         public static string URI {
             get {
                 return ResourceManager.GetString("URI", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to URI Match Detection.
+        /// </summary>
+        public static string URIMatchDetection {
+            get {
+                return ResourceManager.GetString("URIMatchDetection", resourceCulture);
             }
         }
         
