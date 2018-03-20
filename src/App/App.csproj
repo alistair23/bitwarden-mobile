@@ -68,6 +68,7 @@
     <Compile Include="Constants.cs" />
     <Compile Include="Controls\AddCipherToolBarItem.cs" />
     <Compile Include="Controls\ExtendedListView.cs" />
+    <Compile Include="Controls\FormSwitchCell.cs" />
     <Compile Include="Controls\HybridWebView.cs" />
     <Compile Include="Controls\ExtendedToolbarItem.cs" />
     <Compile Include="Controls\DismissModalToolBarItem.cs" />
