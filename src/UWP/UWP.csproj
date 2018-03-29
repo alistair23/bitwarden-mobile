@@ -205,16 +205,16 @@
       <Version>2.2.0</Version>
     </PackageReference>
     <PackageReference Include="Newtonsoft.Json">
-      <Version>11.0.1</Version>
+      <Version>11.0.2</Version>
     </PackageReference>
     <PackageReference Include="PCLCrypto">
       <Version>2.0.147</Version>
     </PackageReference>
     <PackageReference Include="Plugin.Fingerprint">
-      <Version>1.4.6-beta4</Version>
+      <Version>1.4.6</Version>
     </PackageReference>
     <PackageReference Include="SimpleInjector">
-      <Version>4.0.12</Version>
+      <Version>4.1.0</Version>
     </PackageReference>
     <PackageReference Include="sqlite-net-pcl">
       <Version>1.5.166-beta</Version>
@@ -226,7 +226,7 @@
       <Version>3.1.1</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.FFImageLoading.Forms">
-      <Version>2.3.4</Version>
+      <Version>2.3.5</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Forms">
       <Version>2.5.0.280555</Version>
