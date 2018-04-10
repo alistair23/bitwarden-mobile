@@ -61,6 +61,8 @@ namespace Bit.UWP
                     //TODO: Load state from previously suspended application
                 }
 
+                CachedImageRenderer.Init();
+
                 Window.Current.Content = rootFrame;
             }
 
