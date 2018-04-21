@@ -215,7 +215,7 @@
       <Version>1.4.6</Version>
     </PackageReference>
     <PackageReference Include="SimpleInjector">
-      <Version>4.1.1</Version>
+      <Version>4.2.1</Version>
     </PackageReference>
     <PackageReference Include="sqlite-net-pcl">
       <Version>1.5.166-beta</Version>
