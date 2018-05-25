@@ -259,6 +259,21 @@ namespace Bit.App.Pages
                     Spacing = 0
                 };
 
+                if(Device.RuntimePlatform == Device.iOS)
+                {
+                    var tryAgainButton = new ExtendedButton
+                    {
+                        Text = AppResources.UseAnotherTwoStepMethod,
+                        Style = (Style)Application.Current.Resources["btn-primaryAccent"],
+                        Margin = new Thickness(15, 0, 15, 25),
+                        Command = new Command(() => ListenYubiKey(true, true)),
+                        Uppercase = false,
+                        BackgroundColor = Color.Transparent,
+                        VerticalOptions = LayoutOptions.Start
+                    };
+                    layout.Children.Insert(3, tryAgainButton);
+                }
+
                 table.WrappingStackLayout = () => layout;
                 ToolbarItems.Add(continueToolbarItem);
 
