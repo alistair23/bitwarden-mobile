@@ -2915,6 +2915,15 @@ namespace Bit.App.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Try Again.
+        /// </summary>
+        public static string TryAgain {
+            get {
+                return ResourceManager.GetString("TryAgain", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Two-step Login.
         /// </summary>
         public static string TwoStepLogin {
@@ -3325,6 +3334,15 @@ namespace Bit.App.Resources {
         public static string YubiKeyInstruction {
             get {
                 return ResourceManager.GetString("YubiKeyInstruction", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to To continue, hold your YubiKey NEO against the back of the device..
+        /// </summary>
+        public static string YubiKeyInstructionIos {
+            get {
+                return ResourceManager.GetString("YubiKeyInstructionIos", resourceCulture);
             }
         }
         
