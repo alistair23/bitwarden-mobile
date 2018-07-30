@@ -333,8 +333,9 @@ namespace Bit.App.Utilities
             return cell;
         }
 
-        public static void ProcessFieldsSectionForSave(TableSection fieldsSection, Cipher cipher)
+        public static List<Tuple<string, string>> ProcessFieldsSectionForSave(TableSection fieldsSection, Cipher cipher)
         {
+            var hiddenFieldValues = new List<Tuple<string, string>>();
             if(fieldsSection != null && fieldsSection.Count > 0)
             {
                 var fields = new List<Field>();
@@ -350,6 +351,12 @@ namespace Bit.App.Utilities
                                 entryCell.Entry.Text.Encrypt(cipher.OrganizationId),
                             Type = entryCell.Entry.IsPassword ? FieldType.Hidden : FieldType.Text
                         });
+
+                        if(entryCell.Entry.IsPassword && !string.IsNullOrWhiteSpace(entryCell.Label.Text))
+                        {
+                            hiddenFieldValues.Add(new Tuple<string, string>(entryCell.Label.Text,
+                                entryCell.Entry.Text));
+                        }
                     }
                     else if(cell is FormSwitchCell switchCell)
                     {
@@ -370,6 +377,7 @@ namespace Bit.App.Utilities
             {
                 cipher.Fields = null;
             }
+            return hiddenFieldValues;
         }
 
         public static FormEntryCell MakeUriCell(string value, UriMatchType? match, TableSection urisSection, Page page)
