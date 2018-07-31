@@ -398,10 +398,11 @@ namespace Bit.App.Pages
                         var totpKey = cipher.Login?.Totp.Decrypt(cipher.OrganizationId);
                         if(!string.IsNullOrWhiteSpace(totpKey))
                         {
+                            var otpParams = new OtpAuth(totpKey);
                             Model.LoginTotpCode = Crypto.Totp(totpKey);
                             if(!string.IsNullOrWhiteSpace(Model.LoginTotpCode))
                             {
-                                TotpTick(totpKey);
+                                TotpTick(totpKey, otpParams.Period);
                                 _timerStarted = DateTime.Now;
                                 Device.StartTimer(new TimeSpan(0, 0, 1), () =>
                                 {
@@ -410,7 +411,7 @@ namespace Bit.App.Pages
                                         return false;
                                     }
 
-                                    TotpTick(totpKey);
+                                    TotpTick(totpKey, otpParams.Period);
                                     return true;
                                 });
 
@@ -515,11 +516,11 @@ namespace Bit.App.Pages
             _deviceActionService.Toast(string.Format(AppResources.ValueHasBeenCopied, alertLabel));
         }
 
-        private void TotpTick(string totpKey)
+        private void TotpTick(string totpKey, int interval)
         {
             var now = Helpers.EpocUtcNow() / 1000;
-            var mod = now % 30;
-            Model.LoginTotpSecond = (int)(30 - mod);
+            var mod = now % interval;
+            Model.LoginTotpSecond = (int)(interval - mod);
 
             if(mod == 0)
             {
