@@ -49,9 +49,9 @@ namespace Bit.App.Pages
                 Source = "logo.png",
                 VerticalOptions = LayoutOptions.CenterAndExpand,
                 HorizontalOptions = LayoutOptions.Center,
-                WidthRequest = 282,
+                WidthRequest = 650,
                 Margin = new Thickness(0, 30, 0, 0),
-                HeightRequest = 57
+                HeightRequest = 132
             };
 
             var message = new Label
