@@ -160,6 +160,7 @@
     <Compile Include="Models\Identity.cs" />
     <Compile Include="Models\Login.cs" />
     <Compile Include="Models\LoginUri.cs" />
+    <Compile Include="Models\OtpAuth.cs" />
     <Compile Include="Models\Page\VaultAttachmentsPageModel.cs" />
     <Compile Include="Models\PasswordHistory.cs" />
     <Compile Include="Models\SecureNote.cs" />
