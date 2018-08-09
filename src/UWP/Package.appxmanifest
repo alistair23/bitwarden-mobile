@@ -29,6 +29,7 @@
   </Applications>
   <Capabilities>
     <Capability Name="internetClient" />
+    <Capability Name="privateNetworkClientServer" />
     <DeviceCapability Name="webcam" />
   </Capabilities>
 </Package>
