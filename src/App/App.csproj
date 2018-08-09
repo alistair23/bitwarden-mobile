@@ -116,6 +116,7 @@
     <Compile Include="Models\Api\IdentityType.cs" />
     <Compile Include="Models\Api\LoginType.cs" />
     <Compile Include="Models\Api\LoginUriType.cs" />
+    <Compile Include="Models\Api\Request\PasswordHistoryRequest.cs" />
     <Compile Include="Models\Api\Response\CollectionResponse.cs" />
     <Compile Include="Models\Api\Request\DeviceTokenRequest.cs" />
     <Compile Include="Models\Api\Request\FolderRequest.cs" />
@@ -132,6 +133,7 @@
     <Compile Include="Models\Api\Response\FolderResponse.cs" />
     <Compile Include="Models\Api\Response\ListResponse.cs" />
     <Compile Include="Models\Api\Response\DeviceResponse.cs" />
+    <Compile Include="Models\Api\Response\PasswordHistoryResponse.cs" />
     <Compile Include="Models\Api\Response\ProfileOrganizationResponse.cs" />
     <Compile Include="Models\Api\Response\KeysResponse.cs" />
     <Compile Include="Models\Api\Response\SyncResponse.cs" />
@@ -150,6 +152,7 @@
     <Compile Include="Models\Data\CipherData\IdentityDataModel.cs" />
     <Compile Include="Models\Data\CipherData\LoginDataModel.cs" />
     <Compile Include="Models\Data\CipherData\LoginUriDataModel.cs" />
+    <Compile Include="Models\Data\CipherData\PasswordHistoryDataModel.cs" />
     <Compile Include="Models\Data\CipherData\SecureNoteDataModel.cs" />
     <Compile Include="Models\Data\CollectionData.cs" />
     <Compile Include="Models\Field.cs" />
@@ -158,6 +161,7 @@
     <Compile Include="Models\Login.cs" />
     <Compile Include="Models\LoginUri.cs" />
     <Compile Include="Models\Page\VaultAttachmentsPageModel.cs" />
+    <Compile Include="Models\PasswordHistory.cs" />
     <Compile Include="Models\SecureNote.cs" />
     <Compile Include="Models\SymmetricCryptoKey.cs" />
     <Compile Include="Models\Data\SettingsData.cs" />
