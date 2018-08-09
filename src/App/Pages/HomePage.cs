@@ -34,10 +34,11 @@ namespace Bit.App.Pages
             var settingsButton = new ExtendedButton
             {
                 Image = "cog.png",
+                Scale = 0.25,
                 VerticalOptions = LayoutOptions.Start,
                 HorizontalOptions = LayoutOptions.Start,
-                WidthRequest = 25,
-                HeightRequest = 25,
+                WidthRequest = 100,
+                HeightRequest = 100,
                 BackgroundColor = Color.Transparent,
                 Margin = new Thickness(-20, -30, 0, 0),
                 Command = new Command(async () => await SettingsAsync())
@@ -50,7 +51,7 @@ namespace Bit.App.Pages
                 HorizontalOptions = LayoutOptions.Center,
                 WidthRequest = 282,
                 Margin = new Thickness(0, 30, 0, 0),
-                HeightRequest = 44
+                HeightRequest = 57
             };
 
             var message = new Label
