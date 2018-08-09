@@ -546,14 +546,13 @@ namespace Bit.App.Models.Page
             Name = cipher.Name?.Decrypt(cipher.OrganizationId);
             Notes = cipher.Notes?.Decrypt(cipher.OrganizationId);
             var revisionDate = DateTime.SpecifyKind(cipher.RevisionDate, DateTimeKind.Utc).ToLocalTime();
-            RevisionDate = revisionDate.ToShortDateString() + " " + revisionDate.ToShortTimeString();
+            RevisionDate = revisionDate.ToString("yyyy/MM/dd HH:mm");
 
             if(cipher.PasswordRevisionDisplayDate.HasValue)
             {
                 var passwordRevisionDate = DateTime.SpecifyKind(
                     cipher.PasswordRevisionDisplayDate.Value, DateTimeKind.Utc).ToLocalTime();
-                PasswordRevisionDate = passwordRevisionDate.ToShortDateString() + " " +
-                    passwordRevisionDate.ToShortTimeString();
+                PasswordRevisionDate = passwordRevisionDate.ToString("yyyy/MM/dd HH:mm");
             }
             else
             {
