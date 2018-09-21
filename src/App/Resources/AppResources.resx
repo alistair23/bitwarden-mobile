@@ -1313,4 +1313,19 @@
     <value>Updated</value>
     <comment>ex. Date this item was updated</comment>
   </data>
+  <data name="AutofillActivated" xml:space="preserve">
+    <value>AutoFill Activated!</value>
+  </data>
+  <data name="MustLogInMainAppAutofill" xml:space="preserve">
+    <value>You must log into the main Bitwarden app before you can use AutoFill.</value>
+  </data>
+  <data name="AutofillSetup" xml:space="preserve">
+    <value>Your logins are now easily accessable right from your keyboard while logging into apps and websites.</value>
+  </data>
+  <data name="AutofillSetup2" xml:space="preserve">
+    <value>We recommend disabling any other AutoFill apps under Settings if you do not plan to use them.</value>
+  </data>
+  <data name="BitwardenAutofillDescription" xml:space="preserve">
+    <value>AutoFill logins directly from your keyboard when logging into websites and other apps.</value>
+  </data>
 </root>
