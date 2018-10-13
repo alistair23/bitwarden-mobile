@@ -98,6 +98,7 @@
     <Compile Include="Controls\VaultListViewCell.cs" />
     <Compile Include="Enums\DeviceType.cs" />
     <Compile Include="Enums\FieldType.cs" />
+    <Compile Include="Enums\KdfType.cs" />
     <Compile Include="Enums\SecureNoteType.cs" />
     <Compile Include="Enums\TwoFactorProviderType.cs" />
     <Compile Include="Enums\EncryptionType.cs" />
@@ -117,6 +118,7 @@
     <Compile Include="Models\Api\LoginType.cs" />
     <Compile Include="Models\Api\LoginUriType.cs" />
     <Compile Include="Models\Api\Request\PasswordHistoryRequest.cs" />
+    <Compile Include="Models\Api\Request\PreloginRequest.cs" />
     <Compile Include="Models\Api\Response\CollectionResponse.cs" />
     <Compile Include="Models\Api\Request\DeviceTokenRequest.cs" />
     <Compile Include="Models\Api\Request\FolderRequest.cs" />
@@ -134,6 +136,7 @@
     <Compile Include="Models\Api\Response\ListResponse.cs" />
     <Compile Include="Models\Api\Response\DeviceResponse.cs" />
     <Compile Include="Models\Api\Response\PasswordHistoryResponse.cs" />
+    <Compile Include="Models\Api\Response\PreloginResponse.cs" />
     <Compile Include="Models\Api\Response\ProfileOrganizationResponse.cs" />
     <Compile Include="Models\Api\Response\KeysResponse.cs" />
     <Compile Include="Models\Api\Response\SyncResponse.cs" />
