@@ -59,7 +59,7 @@ namespace Bit.App.Pages
                 table.BottomPadding = 50;
             }
 
-            var saveToolBarItem = new ToolbarItem(AppResources.Save, Helpers.ToolbarImage("envelope.png"), async () =>
+            var saveToolBarItem = new ToolbarItem(AppResources.Save, Helpers.ToolbarImage("save.png"), async () =>
             {
                 if(_lastAction.LastActionWasRecent())
                 {

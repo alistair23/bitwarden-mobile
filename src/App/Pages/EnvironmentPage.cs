@@ -111,7 +111,7 @@ namespace Bit.App.Pages
                 Content = StackLayout
             };
 
-            var toolbarItem = new ToolbarItem(AppResources.Save, Helpers.ToolbarImage("envelope.png"), async () => await SaveAsync(),
+            var toolbarItem = new ToolbarItem(AppResources.Save, Helpers.ToolbarImage("save.png"), async () => await SaveAsync(),
                 ToolbarItemOrder.Default, 0);
 
             if(Device.RuntimePlatform == Device.iOS)

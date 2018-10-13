@@ -45,6 +45,7 @@
     <Content Include="$(MSBuildThisFileDirectory)refresh.png" />
     <Content Include="$(MSBuildThisFileDirectory)refresh_alt.png" />
     <Content Include="$(MSBuildThisFileDirectory)refresh_selected.png" />
+    <Content Include="$(MSBuildThisFileDirectory)save.png" />
     <Content Include="$(MSBuildThisFileDirectory)search.png" />
     <Content Include="$(MSBuildThisFileDirectory)share.png" />
     <Content Include="$(MSBuildThisFileDirectory)share_tools.png" />

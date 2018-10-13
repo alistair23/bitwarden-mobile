@@ -124,7 +124,7 @@ namespace Bit.App.Pages
                 Margin = new Thickness(0, 40, 0, 0)
             };
 
-            SaveToolbarItem = new ToolbarItem(AppResources.Save, Helpers.ToolbarImage("envelope.png"), async () =>
+            SaveToolbarItem = new ToolbarItem(AppResources.Save, Helpers.ToolbarImage("save.png"), async () =>
             {
                 if(_lastAction.LastActionWasRecent() || _cipher == null)
                 {
