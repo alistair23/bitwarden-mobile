@@ -109,8 +109,7 @@ namespace Bit.App.Controls
                     _buttonStackLayout.Children.Add(Button1);
                     Button1.Padding = new Thickness(0);
                     Button1.BackgroundColor = Color.Transparent;
-                    Button1.WidthRequest = 40;
-                    Button1.VerticalOptions = LayoutOptions.FillAndExpand;
+                    Button1.VerticalOptions = LayoutOptions.End;
                 }
 
                 if(!string.IsNullOrWhiteSpace(button2))
@@ -119,8 +118,7 @@ namespace Bit.App.Controls
                     _buttonStackLayout.Children.Add(Button2);
                     Button2.Padding = new Thickness(0);
                     Button2.BackgroundColor = Color.Transparent;
-                    Button2.WidthRequest = 40;
-                    Button2.VerticalOptions = LayoutOptions.FillAndExpand;
+                    Button2.VerticalOptions = LayoutOptions.End;
                 }
             }
 

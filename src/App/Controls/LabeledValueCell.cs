@@ -76,11 +76,10 @@ namespace Bit.App.Controls
                 {
                     Image = button1Image,
                     HorizontalOptions = LayoutOptions.End,
-                    VerticalOptions = LayoutOptions.FillAndExpand,
+                    VerticalOptions = LayoutOptions.End,
                     Margin = new Thickness(0),
                     Padding = new Thickness(0),
-                    BackgroundColor = Color.Transparent,
-                    WidthRequest = 40
+                    BackgroundColor = Color.Transparent
                 };
 
                 buttonStackLayout.Children.Add(Button1);
@@ -92,11 +91,10 @@ namespace Bit.App.Controls
                 {
                     Image = button2Image,
                     HorizontalOptions = LayoutOptions.End,
-                    VerticalOptions = LayoutOptions.FillAndExpand,
+                    VerticalOptions = LayoutOptions.End,
                     Margin = new Thickness(0),
                     Padding = new Thickness(0),
-                    BackgroundColor = Color.Transparent,
-                    WidthRequest = 40
+                    BackgroundColor = Color.Transparent
                 };
 
                 buttonStackLayout.Children.Add(Button2);
