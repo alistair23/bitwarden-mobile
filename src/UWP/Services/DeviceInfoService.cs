@@ -11,6 +11,15 @@ namespace Bit.UWP.Services
 {
     public class DeviceInfoService : IDeviceInfoService
     {
+        public DeviceInfoService()
+            : this(false)
+        { }
+
+        public DeviceInfoService(bool isExtension)
+        {
+            IsExtension = isExtension;
+        }
+
         private const string SmartCardEmulatorType = "Windows.Devices.SmartCards.SmartCardEmulator";
 
         public string Type => Xamarin.Forms.Device.UWP;
@@ -43,5 +52,6 @@ namespace Bit.UWP.Services
         
         public bool AutofillServiceSupported => false;
         public bool HasFaceIdSupport => false;
+        public bool IsExtension { get; private set; }
     }
 }

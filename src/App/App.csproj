@@ -408,6 +408,7 @@
     <Compile Include="Utilities\Extentions.cs" />
     <Compile Include="Utilities\ExtendedObservableCollection.cs" />
     <Compile Include="Utilities\ApiHttpClient.cs" />
+    <Compile Include="Utilities\PasswordFormatter.cs" />
     <Compile Include="Utilities\PushNotificationContants.cs" />
     <Compile Include="Utilities\TokenHttpRequestMessage.cs" />
   </ItemGroup>

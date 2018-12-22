@@ -61,10 +61,10 @@ namespace Bit.App.Utilities
                     switch(currentType)
                     {
                         case CharType.Number:
-                            currentSpan.TextColor = Color.DodgerBlue;
+                            currentSpan.ForegroundColor = Color.DodgerBlue;
                             break;
                         case CharType.Special:
-                            currentSpan.TextColor = Color.Firebrick;
+                            currentSpan.ForegroundColor = Color.Firebrick;
                             break;
                     }
                 }
