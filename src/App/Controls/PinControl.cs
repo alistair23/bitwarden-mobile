@@ -21,7 +21,8 @@ namespace Bit.App.Controls
             {
                 Keyboard = Keyboard.Numeric,
                 MaxLength = 4,
-                HideCursor = true
+                HideCursor = true,
+                NumbersOnly = true
             };
 
             Entry.BackgroundColor = Entry.TextColor = Color.Transparent;
